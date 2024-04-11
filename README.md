@@ -4,7 +4,26 @@
 
 # Teslo API
 
-1. Levantar la base de datos
+1. Clonar el repositorio.
+```
+https://github.com/dromerof/TesloShop.git
+```
+
+2. Ejecutar.
+``` 
+yarn install
+```
+
+3. Clonar el archivo ```.env.template``` y renombrarlo a ```.env```
+
+4. Llenar las variables de entorno definidas en el .env
+
+5. Levantar la base de datos
 ```
 docker-compose up -d
+```
+
+6. Ejecutar la aplicación en dev:
+```
+yarn start: dev
 ```
