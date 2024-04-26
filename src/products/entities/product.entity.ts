@@ -45,14 +45,14 @@ export class Product {
         array: true,
         default: []
     })
-    tags: string;
+    tags: string[];
 
     @OneToMany(
         () => ProductImage,
         (productImage) => productImage.product,
         {cascade: true} 
     )
-    images?: ProductImage;
+    images?: ProductImage[];
 
 
     @BeforeInsert()
