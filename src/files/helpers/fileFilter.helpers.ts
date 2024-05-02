@@ -4,10 +4,10 @@ export const fileFilter = (req: Express.Request, file: Express.Multer.File, call
 
     if (!file) return callback (new error("File is empty"), false);
 
-    const fileExptension = file.mimetype.split("/")[1];
+    const fileExtension = file.mimetype.split("/")[1];
     const validExtension = ["jpg","jpeg","png","gif"];
 
-    if (validExtension.includes (fileExptension)) {
+    if (validExtension.includes (fileExtension)) {
         return callback(null, true)
     }
 
