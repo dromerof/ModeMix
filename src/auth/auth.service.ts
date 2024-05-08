@@ -7,7 +7,6 @@ import * as bcrypt from "bcrypt"
 import { User } from './entities/user.entity';
 import { LoginUserDto, CreateUserDto } from './dto';
 
-
 @Injectable()
 export class AuthService {
 
@@ -64,9 +63,6 @@ export class AuthService {
 
   }
 
-
-
-  
   private handleDBErrors(error: any): never{
 
     if (error.code === "23505")
