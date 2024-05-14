@@ -23,7 +23,8 @@ export class AuthController {
   testtingPrivateRoute(){
     return {
       ok: true,
-      message: "Hola mundo Private"
+      message: "Hola mundo Private",
+      user:{name: "Daniel"}
     }
   }
 
