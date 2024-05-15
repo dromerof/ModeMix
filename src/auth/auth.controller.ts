@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Body, UseGuards, Req } from '@nestjs/common';
+import { Controller, Get, Post, Body, UseGuards, Req, SetMetadata } from '@nestjs/common';
 import { AuthGuard } from '@nestjs/passport';
 
 import { AuthService } from './auth.service';
@@ -6,6 +6,7 @@ import { GetUser, RawHeader } from './decorators';
 
 import { LoginUserDto, CreateUserDto } from './dto';
 import { User } from './entities/user.entity';
+import { UserRoleGuard } from './guards/user-role/user-role.guard';
 
 @Controller('auth')
 export class AuthController {
@@ -31,15 +32,24 @@ export class AuthController {
     @RawHeader() rawHeader: string[],
   ){
 
-    console.log(request);
-    
-
     return {
       ok: true,
       message: "Hola mundo Private",
       user,
       userEmail,
       rawHeader
+    }
+  }
+
+  @Get("private2")
+  @SetMetadata("roles", ["admin", "super-user"])
+  @UseGuards(AuthGuard(), UserRoleGuard)
+  privateRoute2(
+    @GetUser() user: User,
+  ){
+    return {
+      ok: true,
+      user,
     }
   }
 
