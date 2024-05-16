@@ -19,9 +19,8 @@ async function bootstrap() {
   
   const config = new DocumentBuilder()
     .setTitle('ModeMix')
-    .setDescription('The cats API description')
+    .setDescription('API de ModeMix para la gestión de productos, usuarios, autenticación y más')
     .setVersion('1.0')
-    .addTag('cats')
     .build();
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('api', app, document);
