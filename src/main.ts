@@ -23,6 +23,14 @@ async function bootstrap() {
     .setVersion('1.0')
     .build();
   const document = SwaggerModule.createDocument(app, config);
+  document.tags = [
+    { name: 'Seed', description: 'Endpoint to seed data' },
+    { name: 'Products', description: 'Endpoints related to products' },
+    { name: 'Auth', description: 'Endpoints related to authentication' },
+    { name: 'Files - Get and Upload', description: 'Endpoints related to files' },
+  
+  ];
+
   SwaggerModule.setup('api', app, document);
 
   await app.listen(process.env.PORT);
