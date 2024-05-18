@@ -1,50 +1,82 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bienvenido a ModeMix API</title>
+    <link rel="shortcut icon" href="/img/favicon.svg" type="image/x-icon">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #000000, #0F1A38);
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            text-align: center;
-            color: #333;
+            color: #fff;
         }
+
         .container {
-            background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 600px;
+            width: 90%;
         }
+
         h1 {
-            color: #4CAF50;
+            color: #7FFFD4;
+            margin-bottom: 20px;
+            font-size: 2.5em;
         }
+
         p {
             font-size: 1.2em;
+            margin: 10px 0;
+            line-height: 1.6;
         }
+
         a {
-            color: #4CAF50;
+            color: #7FFFD4;
             text-decoration: none;
             font-weight: bold;
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 30px;
+            background-color: transparent;
+            border: 2px solid #7FFFD4;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
         }
+
         a:hover {
-            text-decoration: underline;
+            background-color: rgba(127, 255, 212, 0.5);
+            color: #fff;
+            transform: scale(1.05);
+            border-color: #fff; /* Añadir un borde blanco al pasar el cursor */
+        }
+
+        footer {
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #aaa;
         }
     </style>
 </head>
+
 <body>
     <div class="container">
-        <h1>Bienvenido a ModeMix API</h1>
+        <h1>ModeMix API</h1>
         <p>Esta es la API de ModeMix para la gestión de productos, usuarios, autenticación y más.</p>
         <p>Para ver la documentación completa de la API, visita:</p>
         <p><a href="https://modemix-api.onrender.com/api" target="_blank">Documentación de ModeMix API</a></p>
+        <footer>&copy; 2024 ModeMix. Daniel Romero.</footer>
     </div>
 </body>
+
 </html>
